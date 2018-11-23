@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto Mono', monospace;
+  color: #EF8354;
+  font-size: 16px;
+  background: #2D3142;
+}
+
+/* .container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+} */
+
+.row {
+  width: 100%;
+  /* display: flex; */
+  /* flex-wrap: nowrap; */
+}
+
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  /* font-size: 0.65em; */
+}
+#nav {
+  position: absolute;
+  margin: 0 15%;
+  text-align: right;
+  top: 150px;
+  /* transform: translateY(-200px); */
+  font-weight: bold;
+}
+#nav ul {
+  list-style: none;
+}
+#nav ul li {
+  position: relative;
+  /* margin: 3.2em 0; */
+}
+#nav ul li a {
+  line-height: 2em;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  letter-spacing: 0.4em;
+  color: rgba(255, 255, 255, 0.35);
+  /* display: block; */
+  transition: all 0.2s ease-out;
+}
+#nav ul li.active a {
+  color: #fff;
+}
+#nav ul li:not(.active)::after {
+  opacity: 0.2;
+}
+#nav ul li:not(.active):hover a {
+  color: rgba(255, 255, 255, 0.75);
+}
+.have-children li:not(.active):hover a {
+  color: #EF8354 !important;
+}
+.have-children ul li.active a {
+  color: #EF8354 !important;
+}
+.have-children ul li a {
+  line-height: 0.8em !important;
+  font-size: 0.9em;
+  letter-spacing: 0 !important;
+  padding-right: 7px;
+}
+.have-children ul {
+  display: none;
+}
+
+#home-section {
+  position: relative;
+  width: 75%;
+  float: right;
+  height: 100vh;
+  padding: 30px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #EF8354;
+  color: #2D3142;
+}
