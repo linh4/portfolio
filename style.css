@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik');
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-html, body{
+html, body {
   width: 100%;
   height: 100%;
   font-family: 'Roboto Mono', monospace;
@@ -15,44 +15,52 @@ html, body{
   font-size: 16px;
   background: #2D3142;
 }
+a {
+  text-decoration: none;
+}
 
 .wrap {
   padding: 64px 0 0;
-  /* max-width: 1410px;*/
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
   overflow: hidden;
 }
+
 .sidebar {
   float: left;
   width: 150px;
-  /* margin-left: 30px; */
   text-align: right;
 }
-.sidebar .sidebar-wrap {
+
+.sidebar .menu {
   position: relative;
   width: 200px;
-  z-index: 9;
 }
-.sidebar .logo {
-  position: static;
+
+.sidebar .title {
   margin-bottom: 37px;
-  color: #fff;
   font-size: 17px;
   font-style: normal;
-  line-height: 1.2;
+  font-family: 'Rubik', sans-serif;;
+  letter-spacing: 0.2em;
 }
+.sidebar .title a {
+  color: #fff;
+  transition: all 0.2s ease-out;
+}
+.sidebar .title a:hover {
+  color: #EF8354;
+}
+
 .sidebar nav ul {
   line-height: 1.4;
   list-style: none;
   text-align: right;
 }
+
 .sidebar nav ul li a {
   line-height: 2em;
-  text-transform: lowercase;
-  text-decoration: none;
   letter-spacing: 0.4em;
   color: rgba(255, 255, 255, 0.35);
   transition: all 0.2s ease-out;
@@ -66,6 +74,7 @@ html, body{
 .sidebar nav ul li:not(.active):hover a {
   color: rgba(255, 255, 255, 0.75);
 }
+
 .have-children li:not(.active):hover a {
   color: #EF8354 !important;
 }
@@ -76,9 +85,12 @@ html, body{
   line-height: 0.8em !important;
   font-size: 0.9em;
   letter-spacing: 0 !important;
-  /* padding-right: 7px; */
 }
 .have-children ul {
+  display: none;
+}
+
+.responsive {
   display: none;
 }
 
@@ -93,7 +105,123 @@ html, body{
   text-align: center;
   padding-top: 50px;
 }
+
 #content > div {
-  position: relative;
-  margin-bottom: 4.1em; /* SPS */
+  /* position: relative; */
+  /* margin-bottom: 4.1em; */
+}
+
+@media only screen and (max-width: 800px) {
+  .wrap {
+    float: none;
+    padding: 3em 0 0;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .responsive {
+    display: block;
+  }
+
+  .sidebar {
+    width: auto;
+    margin: 0 0 3.6em;
+    float: none;
+    overflow: hidden;
+  }
+
+  .sidebar .menu {
+    position: static;
+    width: auto;
+  }
+
+  .sidebar .title {
+    float: left;
+    margin-bottom: 0;
+    max-width: 150px;
+  }
+
+  .sidebar nav {
+    position: fixed;
+    background: #2D3142;
+    width: 80%;
+    z-index: 90;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  .sidebar nav.active {
+    box-shadow: 0 0 1200px 800px rgba(0, 0, 0, 0.3);
+    transform: translateX(0);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+  }
+  .sidebar nav > ul {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    overflow: scroll;
+  }
+  .sidebar nav ul {
+    text-align: left;
+  }
+
+  .sidebar .menu-open {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    padding: 5px;
+    top: 34px;
+    right: 24px;
+  }
+
+  .sidebar .menu-open:before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 23px;
+    height: 3px;
+    border-top: 9px double #fff;
+    border-bottom: 3px solid #fff;
+  }
+
+  .sidebar .menu-open:hover:before {
+    border-top-color: #cacaca;
+    border-bottom-color: #cacaca;
+  }
+
+  .sidebar .menu-close {
+    position: absolute;
+    top: 34px;
+    right: 17px;
+    width: 44px;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .sidebar .menu-close:before {
+    content: '\00d7';
+  }
+  .sidebar .menu-close:hover:before {
+    color: #cacaca;
+  }
+
+  #content {
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .sidebar {
+    margin: 0 0 2em;
+  }
 }
