@@ -15,18 +15,18 @@
           <p class="title"><a href="#">Linh Huynh</a></p>
           <nav>
             <ul>
-              <li class="active"><a href="#">home</a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">technologies</a></li>
-              <li class="have-children"><a href="#">projects</a>
+              <li class="active"><a data-id="home" href="#">home</a></li>
+              <li><a data-id="about" href="#">about</a></li>
+              <li><a data-id="technologies" href="#">technologies</a></li>
+              <li class="have-children"><a class="projects" href="#">projects</a>
                 <ul>
-                  <li><a href="#">split b</a></li>
-                  <li><a href="#">go stamp!</a></li>
-                  <li><a href="#">tic tap tone</a></li>
-                  <li><a href="#">stalk zone</a></li>
+                  <li><a data-id="splitB" href="#">split b</a></li>
+                  <li><a data-id="goStamp" href="#">go stamp!</a></li>
+                  <li><a data-id="ticTapTone" href="#">tic tap tone</a></li>
+                  <li><a data-id="stalkZone" href="#">stalk zone</a></li>
                 </ul>
               </li>
-              <li><a href="#">contact</a></li>
+              <li><a data-id="contact" href="#">contact</a></li>
             </ul>
 
             <a href="#" class="responsive menu-close" style="top: 31px;"></a>
@@ -40,23 +40,35 @@
 
       <section id="content">
 
-        <div class="home-section">
+        <div id="home" class="page">
           Home
         </div>
 
-        <div class="about-section">
+        <div id="about" class="page">
           about
         </div>
 
-        <div class="technologies-section">
+        <div id="technologies" class="page">
           tech
         </div>
 
-        <div class="projects-section">
-          project
-        </div>
+        <!-- <div class="page"> -->
+          <div id="splitB" class="page">
+            Split B
+          </div>
+          <div id="goStamp" class="page">
+            Go Stamp!
+          </div>
+          <div id="ticTapTone" class="page">
+            Tic Tap Tone
+          </div>
+          <div id="stalkZone" class="page">
+            Stalk Zone
+          </div>
+        <!-- </div> -->
 
-        <div class="contact-section">
+
+        <div id="contact" class="page">
           contact
         </div>
 
