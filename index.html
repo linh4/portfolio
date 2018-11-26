@@ -6,34 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Linh Huynh</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
   <body>
 
     <div class="wrap">
       <div class="sidebar">
         <div class="menu">
-          <p class="title"><a href="#">Linh Huynh</a></p>
+          <p class="title">Linh Huynh</p>
           <nav>
             <ul>
-              <li class="active"><a data-id="home" href="#">home</a></li>
-              <li><a data-id="about" href="#">about</a></li>
-              <li><a data-id="technologies" href="#">technologies</a></li>
-              <li class="have-children"><a class="projects" href="#">projects</a>
+              <li class="active" data-id="home">home</li>
+              <li data-id="about">about</li>
+              <li class="have-children"><span class="projects">projects</span>
                 <ul>
-                  <li><a data-id="splitB" href="#">split b</a></li>
-                  <li><a data-id="goStamp" href="#">go stamp!</a></li>
-                  <li><a data-id="ticTapTone" href="#">tic tap tone</a></li>
-                  <li><a data-id="stalkZone" href="#">stalk zone</a></li>
+                  <li data-id="splitB">split b</li>
+                  <li data-id="goStamp">go stamp!</li>
+                  <li data-id="ticTapTone">tic tap tone</li>
+                  <li data-id="stalkZone">stalk zone</li>
                 </ul>
               </li>
-              <li><a data-id="contact" href="#">contact</a></li>
+              <li data-id="contact">contact</li>
             </ul>
-
-            <a href="#" class="responsive menu-close" style="top: 31px;"></a>
-
+           <button class="responsive menu-close" style="top: 31px;"></button>
           </nav>
-
-          <a href="#" class="responsive menu-open"></a>
+         <button class="responsive menu-open">></button>
         </div>
       </div>
 
@@ -41,15 +39,18 @@
       <section id="content">
 
         <div id="home" class="page">
-          Home
+          <p>_Hi!</p>
+          <p>_I'm Linh and <span id="typed"></span></p>
+          <p>_Thanks for checking out my page!</p>
         </div>
 
         <div id="about" class="page">
-          about
-        </div>
-
-        <div id="technologies" class="page">
-          tech
+          <img src="pic.jpg" alt="profile picture">
+          <p>_Crafty Full Stack Developer with experience in Ruby on Rails and ReactJs. <br>
+          _Formerly energetic tour guide, hungry foodie, experienced traveler, and all things Linh. <br>
+          _After sampling it all,  I have fallen in love with code and now committed to building my career as a software engineer.</p>
+          <button>Skills</button>
+          <i class="fas fa-arrow-right"></i>
         </div>
 
         <!-- <div class="page"> -->
@@ -80,6 +81,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

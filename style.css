@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik|Space+Mono');
 
 * {
   box-sizing: border-box;
@@ -15,9 +15,9 @@ html, body {
   font-size: 16px;
   background: #2D3142;
 }
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
 /* ------------ SIDEBAR STYLE ----------- */
 .wrap {
@@ -43,14 +43,14 @@ a {
   margin-bottom: 37px;
   font-size: 17px;
   font-style: normal;
-  font-family: 'Rubik', sans-serif;;
+  font-family: 'Rubik', sans-serif;
   letter-spacing: 0.2em;
 }
-.sidebar .title a {
+.sidebar .title {
   color: #fff;
   transition: all 0.2s ease-out;
 }
-.sidebar .title a:hover {
+.sidebar .title:hover {
   color: #EF8354;
 }
 
@@ -60,30 +60,31 @@ a {
   text-align: right;
 }
 
-.sidebar nav ul li a {
+.sidebar nav ul li {
   line-height: 2em;
   letter-spacing: 0.4em;
   color: rgba(255, 255, 255, 0.35);
   transition: all 0.2s ease-out;
+  cursor: pointer;
 }
-.sidebar nav ul li.active a {
+.sidebar nav ul li.active {
   color: #fff;
 }
 .sidebar nav ul li:not(.active)::after {
   opacity: 0.2;
 }
-.sidebar nav ul li:not(.active):hover a {
+.sidebar nav ul li:not(.active):hover {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.have-children li:not(.active):hover a {
+.have-children li:not(.active):hover {
   color: #EF8354 !important;
 }
-.have-children ul li.active a {
+.have-children ul li.active {
   color: #EF8354 !important;
 }
-.have-children ul li a {
-  line-height: 0.8em !important;
+.have-children ul li {
+  line-height: 1.2 !important;
   font-size: 0.9em;
   letter-spacing: 0 !important;
 }
@@ -104,13 +105,9 @@ a {
   background: #EF8354;
   color: #2D3142;
   height: 100%;
-  text-align: center;
-  padding-top: 60px;
-}
-
-#content > div {
-  /* position: relative; */
-  /* margin-bottom: 4.1em; */
+  text-align: left;
+  padding: 60px;
+  font-family: 'Space Mono', monospace;
 }
 
 .page {
@@ -119,7 +116,27 @@ a {
 #home {
   display: block;
 }
+#home > p {
+  font-size: 1.5em;
+}
 
+.typed-cursor {
+  color: #fff;
+  font-style: italic;
+}
+#typed {
+  color: #fff;
+}
+
+#about img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+#about > p {
+  line-height: 2;
+}
 /* ------------------ RESPONSIVE DESIGN -------------- */
 @media only screen and (max-width: 800px) {
   .wrap {
@@ -187,6 +204,7 @@ a {
     padding: 5px;
     top: 34px;
     right: 24px;
+    background: none;
   }
 
   .sidebar .menu-open::before {
@@ -213,6 +231,7 @@ a {
     font-size: 32px;
     text-align: center;
     color: #fff;
+    background: none;
   }
 
   .sidebar .menu-close:before {
